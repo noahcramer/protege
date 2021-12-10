@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html>
+    <title>Protegé</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="classes.css" />
+    <link rel="stylesheet" href="cross_browser.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <body>
+        <!-- <div id="test" style="position:relative;">test</div> -->
+        <div class="bgimg display-container animate-opacity text-white">
+            <video autoplay muted loop id="bgvid">
+                <source src="images/protege_drift.mp4" type="video/mp4" />
+            </video>
+
+            <!-- Top Left Logo -->
+            <img id="logo" src="images/Altabit%20White.png" />
+
+            <!-- Main Container -->
+            <div id="main_container" class="main-container">
+                <a
+                    id="protege_title"
+                    href="https://en.wikipedia.org/wiki/Mazda_Familia"
+                    target="_blank"
+                    style="text-decoration: none"
+                    ><h1 class="protege-main animate-zoom">Protegé</h1></a
+                >
+                <h2 class="protege-sub animate-zoom">(THE CRYPTOCURRENCY)</h2>
+                <div id="button_cont" class="flex-container animate-zoom">
+                    <button
+                        id="faq_button"
+                        onclick="enter_menu_mode(document.getElementById('faq_menu'))"
+                        href="#"
+                    >
+                        FAQ
+                    </button>
+                    <button
+                        id="faucet_button"
+                        onclick="enter_menu_mode(document.getElementById('faucet_menu'))"
+                        href="#"
+                    >
+                        FACTORY
+                    </button>
+                    <button
+                        id="nft_button"
+                        onclick="enter_menu_mode(document.getElementById('nft_menu'))"
+                        href="#"
+                    >
+                        NFT
+                    </button>
+                    <button
+                        id="swap_button"
+                        onclick="enter_menu_mode(document.getElementById('swap_menu'))"
+                        href="#"
+                    >
+                        SWAP
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menus -->
+            <div
+                id="menu_container"
+                class="animate-bottom padding-large menu-container"
+            >
+                <button
+                    id="close_button"
+                    onclick="exit_menu_mode()"
+                    class="display-topright padding close"
+                ></button>
+
+                <div id="faq_menu" class="menu-default">
+                    <h1 class="xxxlarge white">FAQ</h1>
+                    <hr />
+                    <div class="medium white">
+                        <h2>Some would also call this the "Whitepaper"</h2>
+                        <h3>Q: What is this?</h3>
+                        <p>A: a cryptocurrency based on my car</p>
+
+                        <h3>Q: Why did you make it?</h3>
+                        <p>A: because I can</p>
+
+                        <h3>Q: How did you make it?</h3>
+                        <p>
+                            A: Like many others, $PROTEGE is an ERC-20 smart
+                            contract ecosystem built on the Ethereum blockchain
+                            using
+                            <a href="https://soliditylang.org/" target="_blank"
+                                >Solidity</a
+                            >
+                            and
+                            <a href="https://openzeppelin.com/" target="_blank"
+                                >OpenZeppelin</a
+                            >. It is open source, and as a matter of fact you
+                            can dig into all the source code
+                            <a href="#" target="_blank">here</a>.
+                        </p>
+
+                        <h3>Q: How can I get some $PROTEGE?</h3>
+                        <p>
+                            A: Go to the <a href="#">factory</a>,
+                            <a href="#">swap</a>, or ask me nicely for some
+                        </p>
+
+                        <h3>Q: How many Protegé can I have?</h3>
+                        <p>
+                            A: As many as you want, so long as you are willing
+                            to wait for them to be minted, or pay $ETH for them
+                            on the swap
+                        </p>
+
+                        <h3>Q: What are the NFT's?</h3>
+                        <p>
+                            A: The NFT collection is a set of unique photos and
+                            artworks featuring Mazda Protegés. More info on them
+                            can be found
+                            <a href="#">here</a>.
+                        </p>
+
+                        <h3>Q: How does the supply work?</h3>
+                        <p>
+                            A: The initial total supply was 1,000,000 Protegé,
+                            and the factory manufactures (mints) 1 Protegé per
+                            hour and parks it in the lot. Whoever drives it off
+                            the lot first keeps it! You can claim up to 1
+                            Protegé per day. This method of distribution means
+                            supply increases linearly, but over time (rate of
+                            issuance)/(total supply) decreases. This helps tp
+                            prevent centralization by early adopters.
+                        </p>
+
+                        <h3>Q: What is the initial distribution?</h3>
+                        <p>
+                            A: The inital allocation of tokens is a follows: 75%
+                            of supply has been liquidity-locked at a fixed floor
+                            price in the swap. 20% of tokens are reserved for
+                            interactive airdrops, and 5% is held by me, the
+                            founder.
+                        </p>
+
+                        <h3>Q: What is the $HRSPR token?</h3>
+                        <p>
+                            A: each $PROTEGE token subdivides into 105 $HRSPR
+                            tokens. This exchange can by submitting an order on
+                            the swap without paying eth gas. The choice behind
+                            this denomination is a that Mazda Protegé SE 1.6
+                            produces 105 horsepower from the factory. The $HSRPR
+                            token is here simply to provide a smaller
+                            denomination for more precise value transactions.
+                            Think of it as the "BRK:B" to $PROTEGE
+                        </p>
+
+                        <h3>
+                            Q: What are the tokenomics? (i.e. what sets it apart
+                            from the vast supply of shitcoins?)
+                        </h3>
+                        <p>
+                            A: As with all good cars, a Protegé burns gasoline,
+                            and the same goes for the cryptocurrency. Each time
+                            a transaction is made, the initiator of the
+                            transaction must pay a fee for fuel (which is burned
+                            from supply). Luckily though, the Protegé's 1.6L
+                            engine is extremely fuel efficient and this fee is
+                            low (5%). This fee boosts tokenomics by increasing
+                            scarcity, slightly decreasing liquidity (and in turn
+                            velocity), decreasing inflation, and decreasing
+                            volatility. These all improve the security of the
+                            asset.
+                        </p>
+
+                        <h3>
+                            Q: How does one execute such a perfect handbrake
+                            drift?
+                        </h3>
+                        <p>A: pure skills ;)</p>
+                    </div>
+                </div>
+
+                <div id="faucet_menu" class="menu-default">
+                    <h1 class="xxxlarge white">Factory</h1>
+                    <hr />
+
+                    <div class="medium white">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Nulla facilisi etiam dignissim
+                            diam quis. Sit amet volutpat consequat mauris. Et
+                            malesuada fames ac turpis. Ornare quam viverra orci
+                            sagittis. Ultricies leo integer malesuada nunc.
+                            Purus semper eget duis at tellus at urna. Sed
+                            blandit libero volutpat sed cras ornare. Vitae
+                            turpis massa sed elementum tempus. Pellentesque nec
+                            nam aliquam sem et. Eget mauris pharetra et ultrices
+                            neque ornare aenean euismod. Amet consectetur
+                            adipiscing elit duis tristique sollicitudin. Purus
+                            semper eget duis at tellus at urna. Ut placerat orci
+                            nulla pellentesque dignissim.
+                        </p>
+
+                        <p>
+                            Placerat duis ultricies lacus sed turpis. Neque
+                            ornare aenean euismod elementum nisi quis. Tempor id
+                            eu nisl nunc. Leo vel orci porta non pulvinar neque
+                            laoreet suspendisse interdum. Amet tellus cras
+                            adipiscing enim eu turpis egestas pretium. Vel quam
+                            elementum pulvinar etiam non quam lacus suspendisse
+                            faucibus. Arcu ac tortor dignissim convallis aenean.
+                            Nunc sed augue lacus viverra vitae. Curabitur
+                            gravida arcu ac tortor. Luctus venenatis lectus
+                            magna fringilla urna porttitor rhoncus dolor.
+                            Pulvinar etiam non quam lacus suspendisse. Ultrices
+                            sagittis orci a scelerisque purus semper. Nibh ipsum
+                            consequat nisl vel. Blandit libero volutpat sed cras
+                            ornare arcu. Congue mauris rhoncus aenean vel elit
+                            scelerisque. Non curabitur gravida arcu ac tortor
+                            dignissim convallis aenean. Risus pretium quam
+                            vulputate dignissim suspendisse in. Massa massa
+                            ultricies mi quis hendrerit dolor magna eget.
+                            Phasellus vestibulum lorem sed risus ultricies. Sed
+                            sed risus pretium quam.
+                        </p>
+
+                        <p>
+                            Libero justo laoreet sit amet cursus. Libero nunc
+                            consequat interdum varius sit amet mattis. Sapien
+                            faucibus et molestie ac feugiat sed lectus
+                            vestibulum mattis. Et malesuada fames ac turpis
+                            egestas maecenas pharetra convallis posuere. Eget
+                            nullam non nisi est sit amet facilisis magna. Cursus
+                            turpis massa tincidunt dui ut ornare lectus sit
+                            amet. Accumsan sit amet nulla facilisi. Eu non diam
+                            phasellus vestibulum. Vulputate mi sit amet mauris
+                            commodo quis imperdiet. Ultrices sagittis orci a
+                            scelerisque purus semper eget. Mauris cursus mattis
+                            molestie a iaculis at erat pellentesque adipiscing.
+                            Rhoncus aenean vel elit scelerisque. Tincidunt eget
+                            nullam non nisi est sit.
+                        </p>
+
+                        <p>
+                            Risus in hendrerit gravida rutrum quisque. Vitae
+                            ultricies leo integer malesuada. Leo vel orci porta
+                            non. Amet consectetur adipiscing elit ut aliquam
+                            purus sit amet. A diam maecenas sed enim ut sem
+                            viverra aliquet eget. Placerat in egestas erat
+                            imperdiet. Nibh mauris cursus mattis molestie a
+                            iaculis. Convallis posuere morbi leo urna molestie
+                            at. Ultrices sagittis orci a scelerisque purus
+                            semper eget. Ullamcorper a lacus vestibulum sed arcu
+                            non odio euismod lacinia. Sapien eget mi proin sed.
+                            Montes nascetur ridiculus mus mauris vitae ultricies
+                            leo. Elementum sagittis vitae et leo duis ut diam
+                            quam. Donec massa sapien faucibus et molestie ac
+                            feugiat sed. Leo urna molestie at elementum eu
+                            facilisis sed odio morbi. Sapien faucibus et
+                            molestie ac feugiat sed.
+                        </p>
+
+                        <p>
+                            Id aliquet lectus proin nibh nisl condimentum id
+                            venenatis a. Urna neque viverra justo nec ultrices
+                            dui sapien eget mi. Lobortis scelerisque fermentum
+                            dui faucibus in ornare quam viverra orci. Gravida
+                            rutrum quisque non tellus orci ac auctor augue. Ut
+                            pharetra sit amet aliquam id diam maecenas. Dolor
+                            sit amet consectetur adipiscing elit duis tristique.
+                            Velit laoreet id donec ultrices tincidunt arcu.
+                            Justo eget magna fermentum iaculis eu non diam
+                            phasellus vestibulum. Integer eget aliquet nibh
+                            praesent tristique magna sit. Nec tincidunt praesent
+                            semper feugiat nibh sed pulvinar. Et tortor
+                            consequat id porta nibh venenatis cras.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="nft_menu" class="menu-default">
+                    <h1 class="xxxlarge white">NFT</h1>
+                    <hr />
+
+                    <div class="medium white">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Nulla facilisi etiam dignissim
+                            diam quis. Sit amet volutpat consequat mauris. Et
+                            malesuada fames ac turpis. Ornare quam viverra orci
+                            sagittis. Ultricies leo integer malesuada nunc.
+                            Purus semper eget duis at tellus at urna. Sed
+                            blandit libero volutpat sed cras ornare. Vitae
+                            turpis massa sed elementum tempus. Pellentesque nec
+                            nam aliquam sem et. Eget mauris pharetra et ultrices
+                            neque ornare aenean euismod. Amet consectetur
+                            adipiscing elit duis tristique sollicitudin. Purus
+                            semper eget duis at tellus at urna. Ut placerat orci
+                            nulla pellentesque dignissim.
+                        </p>
+
+                        <p>
+                            Placerat duis ultricies lacus sed turpis. Neque
+                            ornare aenean euismod elementum nisi quis. Tempor id
+                            eu nisl nunc. Leo vel orci porta non pulvinar neque
+                            laoreet suspendisse interdum. Amet tellus cras
+                            adipiscing enim eu turpis egestas pretium. Vel quam
+                            elementum pulvinar etiam non quam lacus suspendisse
+                            faucibus. Arcu ac tortor dignissim convallis aenean.
+                            Nunc sed augue lacus viverra vitae. Curabitur
+                            gravida arcu ac tortor. Luctus venenatis lectus
+                            magna fringilla urna porttitor rhoncus dolor.
+                            Pulvinar etiam non quam lacus suspendisse. Ultrices
+                            sagittis orci a scelerisque purus semper. Nibh ipsum
+                            consequat nisl vel. Blandit libero volutpat sed cras
+                            ornare arcu. Congue mauris rhoncus aenean vel elit
+                            scelerisque. Non curabitur gravida arcu ac tortor
+                            dignissim convallis aenean. Risus pretium quam
+                            vulputate dignissim suspendisse in. Massa massa
+                            ultricies mi quis hendrerit dolor magna eget.
+                            Phasellus vestibulum lorem sed risus ultricies. Sed
+                            sed risus pretium quam.
+                        </p>
+
+                        <p>
+                            Libero justo laoreet sit amet cursus. Libero nunc
+                            consequat interdum varius sit amet mattis. Sapien
+                            faucibus et molestie ac feugiat sed lectus
+                            vestibulum mattis. Et malesuada fames ac turpis
+                            egestas maecenas pharetra convallis posuere. Eget
+                            nullam non nisi est sit amet facilisis magna. Cursus
+                            turpis massa tincidunt dui ut ornare lectus sit
+                            amet. Accumsan sit amet nulla facilisi. Eu non diam
+                            phasellus vestibulum. Vulputate mi sit amet mauris
+                            commodo quis imperdiet. Ultrices sagittis orci a
+                            scelerisque purus semper eget. Mauris cursus mattis
+                            molestie a iaculis at erat pellentesque adipiscing.
+                            Rhoncus aenean vel elit scelerisque. Tincidunt eget
+                            nullam non nisi est sit.
+                        </p>
+
+                        <p>
+                            Risus in hendrerit gravida rutrum quisque. Vitae
+                            ultricies leo integer malesuada. Leo vel orci porta
+                            non. Amet consectetur adipiscing elit ut aliquam
+                            purus sit amet. A diam maecenas sed enim ut sem
+                            viverra aliquet eget. Placerat in egestas erat
+                            imperdiet. Nibh mauris cursus mattis molestie a
+                            iaculis. Convallis posuere morbi leo urna molestie
+                            at. Ultrices sagittis orci a scelerisque purus
+                            semper eget. Ullamcorper a lacus vestibulum sed arcu
+                            non odio euismod lacinia. Sapien eget mi proin sed.
+                            Montes nascetur ridiculus mus mauris vitae ultricies
+                            leo. Elementum sagittis vitae et leo duis ut diam
+                            quam. Donec massa sapien faucibus et molestie ac
+                            feugiat sed. Leo urna molestie at elementum eu
+                            facilisis sed odio morbi. Sapien faucibus et
+                            molestie ac feugiat sed.
+                        </p>
+
+                        <p>
+                            Id aliquet lectus proin nibh nisl condimentum id
+                            venenatis a. Urna neque viverra justo nec ultrices
+                            dui sapien eget mi. Lobortis scelerisque fermentum
+                            dui faucibus in ornare quam viverra orci. Gravida
+                            rutrum quisque non tellus orci ac auctor augue. Ut
+                            pharetra sit amet aliquam id diam maecenas. Dolor
+                            sit amet consectetur adipiscing elit duis tristique.
+                            Velit laoreet id donec ultrices tincidunt arcu.
+                            Justo eget magna fermentum iaculis eu non diam
+                            phasellus vestibulum. Integer eget aliquet nibh
+                            praesent tristique magna sit. Nec tincidunt praesent
+                            semper feugiat nibh sed pulvinar. Et tortor
+                            consequat id porta nibh venenatis cras.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="swap_menu" class="menu-default">
+                    <h1 class="xxxlarge white">Swap</h1>
+                    <hr />
+
+                    <div class="medium white">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Nulla facilisi etiam dignissim
+                            diam quis. Sit amet volutpat consequat mauris. Et
+                            malesuada fames ac turpis. Ornare quam viverra orci
+                            sagittis. Ultricies leo integer malesuada nunc.
+                            Purus semper eget duis at tellus at urna. Sed
+                            blandit libero volutpat sed cras ornare. Vitae
+                            turpis massa sed elementum tempus. Pellentesque nec
+                            nam aliquam sem et. Eget mauris pharetra et ultrices
+                            neque ornare aenean euismod. Amet consectetur
+                            adipiscing elit duis tristique sollicitudin. Purus
+                            semper eget duis at tellus at urna. Ut placerat orci
+                            nulla pellentesque dignissim.
+                        </p>
+
+                        <p>
+                            Placerat duis ultricies lacus sed turpis. Neque
+                            ornare aenean euismod elementum nisi quis. Tempor id
+                            eu nisl nunc. Leo vel orci porta non pulvinar neque
+                            laoreet suspendisse interdum. Amet tellus cras
+                            adipiscing enim eu turpis egestas pretium. Vel quam
+                            elementum pulvinar etiam non quam lacus suspendisse
+                            faucibus. Arcu ac tortor dignissim convallis aenean.
+                            Nunc sed augue lacus viverra vitae. Curabitur
+                            gravida arcu ac tortor. Luctus venenatis lectus
+                            magna fringilla urna porttitor rhoncus dolor.
+                            Pulvinar etiam non quam lacus suspendisse. Ultrices
+                            sagittis orci a scelerisque purus semper. Nibh ipsum
+                            consequat nisl vel. Blandit libero volutpat sed cras
+                            ornare arcu. Congue mauris rhoncus aenean vel elit
+                            scelerisque. Non curabitur gravida arcu ac tortor
+                            dignissim convallis aenean. Risus pretium quam
+                            vulputate dignissim suspendisse in. Massa massa
+                            ultricies mi quis hendrerit dolor magna eget.
+                            Phasellus vestibulum lorem sed risus ultricies. Sed
+                            sed risus pretium quam.
+                        </p>
+
+                        <p>
+                            Libero justo laoreet sit amet cursus. Libero nunc
+                            consequat interdum varius sit amet mattis. Sapien
+                            faucibus et molestie ac feugiat sed lectus
+                            vestibulum mattis. Et malesuada fames ac turpis
+                            egestas maecenas pharetra convallis posuere. Eget
+                            nullam non nisi est sit amet facilisis magna. Cursus
+                            turpis massa tincidunt dui ut ornare lectus sit
+                            amet. Accumsan sit amet nulla facilisi. Eu non diam
+                            phasellus vestibulum. Vulputate mi sit amet mauris
+                            commodo quis imperdiet. Ultrices sagittis orci a
+                            scelerisque purus semper eget. Mauris cursus mattis
+                            molestie a iaculis at erat pellentesque adipiscing.
+                            Rhoncus aenean vel elit scelerisque. Tincidunt eget
+                            nullam non nisi est sit.
+                        </p>
+
+                        <p>
+                            Risus in hendrerit gravida rutrum quisque. Vitae
+                            ultricies leo integer malesuada. Leo vel orci porta
+                            non. Amet consectetur adipiscing elit ut aliquam
+                            purus sit amet. A diam maecenas sed enim ut sem
+                            viverra aliquet eget. Placerat in egestas erat
+                            imperdiet. Nibh mauris cursus mattis molestie a
+                            iaculis. Convallis posuere morbi leo urna molestie
+                            at. Ultrices sagittis orci a scelerisque purus
+                            semper eget. Ullamcorper a lacus vestibulum sed arcu
+                            non odio euismod lacinia. Sapien eget mi proin sed.
+                            Montes nascetur ridiculus mus mauris vitae ultricies
+                            leo. Elementum sagittis vitae et leo duis ut diam
+                            quam. Donec massa sapien faucibus et molestie ac
+                            feugiat sed. Leo urna molestie at elementum eu
+                            facilisis sed odio morbi. Sapien faucibus et
+                            molestie ac feugiat sed.
+                        </p>
+
+                        <p>
+                            Id aliquet lectus proin nibh nisl condimentum id
+                            venenatis a. Urna neque viverra justo nec ultrices
+                            dui sapien eget mi. Lobortis scelerisque fermentum
+                            dui faucibus in ornare quam viverra orci. Gravida
+                            rutrum quisque non tellus orci ac auctor augue. Ut
+                            pharetra sit amet aliquam id diam maecenas. Dolor
+                            sit amet consectetur adipiscing elit duis tristique.
+                            Velit laoreet id donec ultrices tincidunt arcu.
+                            Justo eget magna fermentum iaculis eu non diam
+                            phasellus vestibulum. Integer eget aliquet nibh
+                            praesent tristique magna sit. Nec tincidunt praesent
+                            semper feugiat nibh sed pulvinar. Et tortor
+                            consequat id porta nibh venenatis cras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div
+                id="footer"
+                class="display-bottomright padding-large hover-opacity"
+            >
+                by
+                <a href="https://www.instagram.com/noahvcramer/" target="_blank"
+                    >@noahvcramer</a
+                >
+            </div>
+
+            <!-- Scripts -->
+            <script>
+                document.addEventListener("keydown", function (e) {
+                    if (e.key == "Escape") exit_menu_mode();
+                });
+
+                window.onscroll = function (e) {
+                    var vertical_position = 0;
+                    if (pageYOffset)
+                        //usual
+                        vertical_position = pageYOffset;
+                    else if (document.documentElement.clientHeight)
+                        //ie
+                        vertical_position = document.documentElement.scrollTop;
+                    else if (document.body)
+                        //ie quirks
+                        vertical_position = document.body.scrollTop;
+
+                    var object_to_move = document.getElementById("test")[0];
+                    object_to_move.style.top = vertical_position + 100 + "px";
+                };
+
+                // Open Menu
+                function enter_menu_mode(menu) {
+                    document.getElementById("main_container").style.display =
+                        "none";
+                    document.getElementById("menu_container").style.display =
+                        "block";
+
+                    document.getElementById("footer").style.display = "none";
+
+                    menu.style.display = "block";
+                }
+
+                // Close Menu
+                function exit_menu_mode() {
+                    document.getElementById("main_container").style.display =
+                        "block";
+                    document.getElementById("menu_container").style.display =
+                        "none";
+
+                    document.getElementById("footer").style.display = "block";
+
+                    [
+                        "faq_menu",
+                        "faucet_menu",
+                        "nft_menu",
+                        "swap_menu",
+                    ].forEach(function (id) {
+                        document.getElementById(id).style.display = "none";
+                    });
+                }
+            </script>
+        </div>
+    </body>
+</html>

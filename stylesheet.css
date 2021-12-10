@@ -1,0 +1,213 @@
+/* stylesheet.css for protege website */
+
+/* Fonts */
+@font-face {
+    font-family: "Nula-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Nula-Regular"),
+        url("fonts/Nula/Nula-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nula-Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Nula-Medium"),
+        url("fonts/Nula/Nula-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nula-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Nula-Bold"), url("fonts/Nula/Nula-Bold.ttf") format("truetype");
+}
+
+/* Element Tags */
+body,
+h1 {
+    font-family: "Nula-Medium", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+h3 {
+    margin-top: 2em;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+/* Element Classes */
+.bgimg {
+    background-image: url(images/protege_on_parkade.jpg);
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.colossal {
+    font-size: max(15vw, 15px);
+}
+
+/* Element IDs */
+#logo {
+    transition: transform 1s;
+    height: auto;
+    width: auto;
+    position: relative;
+    left: 5px;
+    padding: 10px 10px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#logo:hover {
+    transform: rotate(360deg);
+}
+
+#bgvid {
+  	position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Flex */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* border-style: solid; */
+}
+
+@media (max-width: 650px) {
+    .flex-container {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .flex-container button {
+        width: min(500px, 80%);
+    }
+}
+
+.flex-container button {
+    color: black;
+    border-color: white;
+    text-decoration: none;
+    padding-top: 12px;
+    text-align: center;
+    font-size: 40px;
+    margin: 1%;
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #00000052;
+    box-shadow: 2px 2px 4px #00000052;
+}
+
+.flex-container button:hover {
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+/* Other */
+.main-container {
+    transition: 0.25s ease;
+    text-align: center;
+    width: min(800px, 90%);
+    height: 80%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-container {
+    transition: 0.25s ease-in-out;
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    text-align: left;
+    background-color: white;
+    box-shadow: 2px 2px 4px #00000052;
+    border-radius: 5px 5px 0px 0px;
+
+    width: min(800px, 90%);
+    height: 80%;
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow-y: auto;
+}
+
+.menu-container::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.protege-main {
+    font-size: min(19vw, 200px);
+    text-shadow: 2px 2px 4px #00000052;
+    line-height: 0px;
+}
+
+.protege-sub {
+    font-size: min(5vw, 60px);
+    word-wrap: 0;
+    text-shadow: 2px 2px 4px #00000052;
+    line-height: 0px;
+}
+
+.menu-default {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    transition: transform 0.25s;
+    cursor: pointer;
+    font-size: 4em;
+    font-family: serif;
+    line-height: 1;
+}
+.close:before {
+    content: "\d7";
+}
+.close:hover {
+    transform: rotate(90deg);
+}
